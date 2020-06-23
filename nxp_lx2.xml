@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="github" fetch="https://github.com" />
+        <remote name="nxp"    fetch="https://source.codeaurora.org" />
+        <remote name="denx"     fetch="https://gitlab.denx.de" />
+
+        <default remote="github" revision="master" />
+
+        <!-- OP-TEE gits -->
+        <project path="optee_client"        name="OP-TEE/optee_client.git" revision="refs/tags/3.9.0" clone-depth="1" />
+        <project path="optee_os"            name="OP-TEE/optee_os.git" revision="refs/tags/3.9.0" clone-depth="1" />
+        <project path="optee_test"          name="OP-TEE/optee_test.git" revision="refs/tags/3.9.0" clone-depth="1" />
+        <project path="build"               name="OP-TEE/build.git" revision="refs/tags/3.9.0" clone-depth="1">
+                <linkfile src="nxp.mk" dest="build/Makefile" />
+        </project>
+
+        <!-- linaro-swg gits -->
+        <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git" revision="refs/tags/3.9.0" clone-depth="1" />
+        <project path="optee_examples"       name="linaro-swg/optee_examples.git" revision="refs/tags/3.9.0" clone-depth="1" />
+
+        <!-- Misc gits -->
+        <project path="buildroot"            name="buildroot/buildroot.git"               revision="95942f5fcd35d783a49adce621ccf33480f1c88c" />
+	<project path="trusted-firmware-a"   name="external/qoriq/qoriq-components/atf"   revision="4e2ac70ed56a6aa4b46c0e97b9bc048e12a01f57" remote="nxp" />
+	<project path="linux"          name="external/qoriq/qoriq-components/linux" revision="refs/tags/LSDK-20.04-V5.4" clone-depth="1" remote="nxp" />
+        <project path="u-boot"               name="u-boot/u-boot.git"                     revision="refs/tags/v2019.10" clone-depth="1" remote="denx" />
+</manifest>
