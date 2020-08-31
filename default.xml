@@ -2,7 +2,8 @@
 <manifest>
 	<remote name="github"                   fetch="https://github.com" />
 	<remote name="savannah"                 fetch="git://git.savannah.gnu.org" />
-	<remote name="tfm"                      fetch="https://git.trustedfirmware.org" />
+	<remote name="tf"                       fetch="https://git.trustedfirmware.org" />
+	<remote name="ca"                       fetch="https://source.codeaurora.org/external/imx" />
 
 	<default remote="github"                revision="master" />
 
@@ -43,6 +44,9 @@
 
         <!-- Misc other remotes -->
         <project path="grub"                    name="grub.git"                    remote="savannah" />
-        <project path="trusted-firmware-m"      name="trusted-firmware-m.git"      remote="tfm" />
-	<project path="trusted-firmware-a"      name="TF-A/trusted-firmware-a.git" remote="tfm" />
+        <project path="trusted-firmware-m"      name="trusted-firmware-m.git"      remote="tf" />
+	<project path="trusted-firmware-a"      name="TF-A/trusted-firmware-a.git" remote="tf" />
+	<project path="imx-mkimage"             name="imx-mkimage.git"             remote="ca" revision="refs/tags/rel_imx_5.4.24_2.1.0" />
+	<project path="uboot-imx"               name="uboot-imx.git"               remote="ca" />
+	<project path="linux-imx"               name="linux-imx.git"               remote="ca" />
 </manifest>
