@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
         <remote name="github" fetch="https://github.com" />
+        <remote name="xen-git"      fetch="git://xenbits.xen.org" />
 
         <default remote="github" revision="master" />
 
@@ -8,6 +9,7 @@
         <project path="linux"     name="torvalds/linux.git"         revision="refs/tags/v5.9"         clone-depth="1" />
         <project path="qemu"      name="qemu/qemu.git"              revision="refs/tags/v5.1.0"                       />
         <project path="u-boot"    name="u-boot/u-boot.git"          revision="refs/tags/v2020.10-rc5"                 />
+	<project path="xen"    	  name="xen.git"		    revision="refs/tags/RELEASE-4.14.0"  remote="xen-git"       />
 
 	<project path="build"     name="ruchi393/build.git"     revision="xen">
                 <linkfile src="Makefile"       dest="Makefile" />
