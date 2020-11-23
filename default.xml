@@ -9,7 +9,7 @@
         <project path="qemu"      name="qemu/qemu.git"              revision="refs/tags/v5.1.0"                       />
         <project path="u-boot"    name="u-boot/u-boot.git"          revision="refs/tags/v2020.10-rc5"                 />
 
-	<project path="build"     name="jbech-linaro/build.git"     revision="dte">
+	<project path="build"     name="ruchi393/build.git"     revision="xen">
                 <linkfile src="Makefile"       dest="Makefile" />
                 <linkfile src="toolchain.mk"   dest="toolchain.mk" />
         </project>
